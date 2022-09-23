@@ -119,18 +119,13 @@ function isVal(field) {
             }
         })
 
-        $('#delLaborerOkBtn').click(() => {
-            let laborerId = $('#laborerId:checked').val()
-
-            $.each(laborers, (i, laborer) => {
-                if(laborer.laborerId == laborerId) {
-                    laborers.splice(i, 1)
-                    return false
-                }
+        $('#delLaborerOkBtn').click(() => {          
+            $.ajax({
+            	url: 'laborer/delLaborer.jsp',
+            	data: {laborerId: $('#laborerId:checked').val()},
+            	success: listLaborers
             })
-
             $('#modal').modal('hide')
-            listLaborers()
         })
 
         $('#laborers').on({

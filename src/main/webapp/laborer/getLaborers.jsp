@@ -3,7 +3,7 @@
 <%@ page import='com.my.hr.service.LaborerServiceImpl' %>
 <%@ page import='com.my.hr.domain.Laborer' %>
 <%@ page import='java.util.List' %>
-<%!
+<%
 	LaborerService laborerService = new LaborerServiceImpl();
 %>
 <%

@@ -13,6 +13,7 @@
 	String hireDate = request.getParameter("hireDate");
 	
 	laborerService.fixLaborer(new Laborer(
-			Integer.parseInt(laborerId), name, 
+			Integer.parseInt(laborerId), 
+			name, 
 			LocalDate.parse(hireDate, DateTimeFormatter.ISO_DATE)));
 %>
